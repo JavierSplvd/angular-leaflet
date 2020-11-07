@@ -67,6 +67,8 @@ https://blog.mestwin.net/use-leaflet-in-your-angular-8-project-for-interactive-m
 https://github.com/Asymmetrik/ngx-leaflet
 https://leafletjs.com/examples/choropleth/
 
+# Eventos mouse over y mouse out
+
 # Popup
 
 https://stackoverflow.com/questions/52756424/cant-get-resetstyle-to-work-in-ngx-leaflet
