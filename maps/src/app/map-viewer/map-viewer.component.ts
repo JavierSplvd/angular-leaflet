@@ -37,7 +37,7 @@ export class MapViewerComponent implements OnInit {
 
   currentState = new Subject()
 
-  geoJsonLayer = geoJSON(statesData as any, { style: stateStyle, onEachFeature: this.onEachFeature })
+  geoJsonLayers = geoJSON(statesData as any, { style: stateStyle, onEachFeature: this.onEachFeature })
 
   constructor() {
     this.onEachFeature.bind(this)
@@ -50,7 +50,7 @@ export class MapViewerComponent implements OnInit {
       zoomControl: false,
       scrollWheelZoom: false,
       layers: [
-        this.geoJsonLayer
+        this.geoJsonLayers
       ],
     };
   }
@@ -62,6 +62,9 @@ export class MapViewerComponent implements OnInit {
   click(e: any) {
     console.log(this.map.getCenter())
     console.log(this.map.getBounds())
+    // @ts-ignore
+    console.log(this.map._layers)
+
   }
 
   onEachFeature(feature, layer) {
