@@ -7,14 +7,23 @@ Tenemos que tener en cuenta distintos conceptos que usa Leaflet y que son comune
 
 # Entorno
 El proyecto usa nodejs (v14) y Angular.
+
 Creamos la app con:
+
 $ ng new my-app
+
 Probamos que se ha instalado correctamente con:
+
 $ cd my-app
+
 $ ng serve --open
+
 Hay que instalar tanto leaflet como ngx-leaflet, que es la librería de angular de leaflet y también los tipos para usar typescript.
+
 $ npm install leaflet
+
 $ npm install @asymmetrik/ngx-leaflet
+
 $ npm install --save-dev @types/leaflet
 ```
   "dependencies": {
@@ -110,8 +119,11 @@ Vamos a usar una capa con los estados de Estados Unidos. Esta capa consiste en u
 Hay muchos sitios donde obtener capas con la geometría de los países u otros lugares. Voy a dejar unos links a repositorios con una gran cantidad de datasets:
 - https://github.com/datasets/
 - https://public.opendatasoft.com/
+
 Ahí puedes encontrar datasets con los países, regiones y provincias de muchos países o incluso la localización de parques naturales, aeropuertos y demás lugares de interés.
+
 Nosotros vamos a usar un dataset con los estados de Estados Unidos, llamado us-states.json, y lo vamos a guardar en src/assets. Para acceder a un json en /assets tenemos varias formas. Yo he elegido mediante declaraciones de import.
+
 En tsconfig.json añadir la configuración de:
 ```
     "resolveJsonModule": true, 
